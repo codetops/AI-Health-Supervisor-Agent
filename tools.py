@@ -1,7 +1,6 @@
 
 from typing import Annotated
 from langchain.tools import tool
-from dotenv import load_dotenv
 import requests
 import random
 import os
