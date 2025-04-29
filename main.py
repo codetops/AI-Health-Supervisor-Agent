@@ -2,7 +2,8 @@ from agents import State, fitness_node, dietitian_node, mental_health_node, supe
 from langchain_core.messages import HumanMessage,AIMessage
 from langgraph.graph import StateGraph, START
 from langgraph.checkpoint.memory import MemorySaver
-from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
+
 from utils import parse_langgraph_output
 
 import streamlit as st
@@ -11,7 +12,10 @@ import time
 
 
 # Configuration
-llm = ChatOllama(model="qwen2.5:14b")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# Configuration
+llm = ChatOpenAI(temperature=0.6, model="gpt-4o-mini", openai_api_key=OPENAI_API_KEY)
+
 
 
 memory = MemorySaver()
