@@ -12,6 +12,7 @@ from langgraph.types import Command
 
 from tools import (fitness_data_tool, diet_tool)
 import streamlit as st
+import os
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # Configuration
