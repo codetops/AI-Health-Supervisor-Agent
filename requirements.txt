@@ -1,7 +1,7 @@
 langgraph
 langchain
 langchain-core
-langchain-ollama
+langchain_openai
 typing-extensions
 ipython
 requests
