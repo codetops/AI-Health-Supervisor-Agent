@@ -4,7 +4,7 @@ from langgraph.graph import StateGraph, MessagesState,START, END
 from langgraph.checkpoint.memory import MemorySaver
 from langchain.prompts import PromptTemplate
 from typing import Annotated, Literal
-from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 
 from typing_extensions import TypedDict
 from langgraph.types import Command
@@ -15,7 +15,7 @@ import streamlit as st
 
 
 # Configuration
-llm = ChatOllama(model="qwen2.5:14b")
+llm = ChatOpenAI(temperature=0.6, model="gpt-4o-mini", openai_api_key=OPENAI_API_KEY)
 
 
 memory = MemorySaver()
