@@ -13,7 +13,7 @@ from langgraph.types import Command
 from tools import (fitness_data_tool, diet_tool)
 import streamlit as st
 
-
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # Configuration
 llm = ChatOpenAI(temperature=0.6, model="gpt-4o-mini", openai_api_key=OPENAI_API_KEY)
 
